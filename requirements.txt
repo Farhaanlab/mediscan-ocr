@@ -6,5 +6,5 @@ thefuzz
 python-Levenshtein
 pytesseract
 Pillow
-opencv-python
+opencv-python-headless
 spacy

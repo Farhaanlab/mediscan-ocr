@@ -5,8 +5,7 @@ FROM python:3.10-slim
 RUN apt-get update && apt-get install -y \
     tesseract-ocr \
     libtesseract-dev \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory in the container
