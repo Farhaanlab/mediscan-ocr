@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Intelligent Prescription Scanner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>AuraScanner</h1>
+            <p>Upload your prescription and let our AI precisely analyze the medicines.</p>
+        </header>
+
+        <section class="upload-section" id="upload-section">
+            <div class="drop-zone" id="drop-zone">
+                <div class="icon-container">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="upload-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                </div>
+                <h3>Drag & Drop your prescription here</h3>
+                <p>or click to browse from your device</p>
+                <input type="file" id="file-input" accept="image/*" hidden>
+            </div>
+            
+            <div class="loading-state hidden" id="loading-state">
+                <div class="scanner-container">
+                    <div class="scanner-line"></div>
+                    <img id="preview-image" src="" alt="Scanning...">
+                </div>
+                <h3>Analyzing Prescription...</h3>
+                <p>Gemini AI is extracting and matching medicines locally.</p>
+            </div>
+        </section>
+
+        <section class="results-section hidden" id="results-section">
+            <div class="results-header">
+                <h2>Analysis Results</h2>
+                <button class="btn-secondary" id="scan-new-btn">Scan Another</button>
+            </div>
+            <div class="cards-grid" id="results-grid">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

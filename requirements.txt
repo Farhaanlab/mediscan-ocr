@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+python-multipart
+thefuzz
+python-Levenshtein
+pytesseract
+Pillow
+opencv-python
+spacy
